@@ -60,6 +60,7 @@ img {
     font-weight: 900;
     padding: 1rem;
     transition: background-color .3s ease-out;
+    text-align: center;
 }
 
 .btn:hover {
@@ -69,6 +70,10 @@ img {
 /* Utilities */
 .text-center {
     text-align: center;
+}
+
+.max-width-30 {
+    max-width: 30rem;
 }
 
 /* Header y Navegation */
