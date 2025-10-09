@@ -267,3 +267,40 @@ img {
     flex-direction: column;
     justify-content: center;
 }
+
+/* Blog Page */
+
+.contenido-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: 700;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+
+.blog {}
+
+.sidebar {}
