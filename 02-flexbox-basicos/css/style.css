@@ -3,27 +3,34 @@
     --blanco: #FFF;
     --naranja: #ff4f1e;
 }
+
 html {
-    font-size: 62.5%; /** 1REM = 10pX **/
+    font-size: 62.5%;
+    /** 1REM = 10pX **/
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-  
+
 
 body {
     background-color: var(--azul);
-    font-family:  'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: var(--blanco);
     text-align: center;
     margin: 5rem 0;
     padding: 1rem;
 }
+
 .caja-curso {
     background-color: var(--naranja);
     text-align: center;
@@ -31,12 +38,15 @@ h1, h2 {
     padding: 5rem;
 
 }
+
 .caja-curso h1 {
     margin: 0;
 }
+
 .caja-curso p {
     font-size: 2.4rem;
 }
+
 .caja-curso a {
     font-size: 2.4rem;
     padding: 2rem;
@@ -51,6 +61,7 @@ h1, h2 {
     max-width: 120rem;
     margin: 0 auto;
 }
+
 .box {
     background-color: var(--naranja);
     color: var(--blanco);
@@ -62,7 +73,131 @@ h1, h2 {
     border: 1rem solid #bb2b03;
 }
 
-.contenedor > div {
+.contenedor>div {
     background-color: var(--blanco);
     padding: 5rem;
+}
+
+/* display flex 1 */
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/* display flex 2*/
+.d-flex-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+/* display flex 3*/
+.d-flex-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* display flex 4 */
+.d-flex-4 {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* display flex 5 */
+.d-flex-5 {
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* display flex 6 */
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* display flex 7 */
+.d-flex-7 {
+    height: 800px;
+    display: flex;
+
+    /* valores por default row */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    /*valores por default column*/
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* display flex 8 */
+.d-flex-8 {
+    display: flex;
+}
+
+.d-flex-8 .box {
+    flex-basis: 33.3%;
+}
+
+/* display flex 9 */
+.d-flex-9 {
+    display: flex;
+    gap: 10rem;
+}
+
+.d-flex-9 .box {
+    flex-basis: 33.3%;
+}
+
+/* display flex 10 */
+.d-flex-10 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+/* display flex 11 */
+.d-flex-11 {
+    display: flex;
+}
+
+.d-flex-11 .box:nth-child(1) {
+    flex-grow: 2;
+}
+
+.d-flex-11 .box:nth-child(2),
+.d-flex-11 .box:nth-child(3) {
+    flex-grow: 1;
+}
+
+/* display flex 12 */
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.d-flex-12 .box:nth-child(3) {
+    flex-shrink: 2;
+}
+
+/* display flex 13 */
+.d-flex-13 {
+    display: flex;
+}
+
+.d-flex-13 .box {
+    flex: 1 0 33.3%;
 }
