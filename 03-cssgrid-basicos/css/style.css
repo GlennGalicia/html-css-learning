@@ -90,3 +90,16 @@ h2 {
 .grid-3 .box:nth-child(2) {
     grid-row: 1 / 2;
 }
+
+/* grid span definition */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-4 .box:nth-child(2) {
+    background-color: burlywood;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
