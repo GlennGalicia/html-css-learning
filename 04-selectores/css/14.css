@@ -1,0 +1,4 @@
+/* Seleccionar elemento por clase menos 1 en especifico */
+p:not(.texto):not(.oferta) {
+    background-color: salmon;
+}

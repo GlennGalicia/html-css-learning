@@ -1,0 +1,4 @@
+/* selector primer elemento después */
+.admin > div + p {
+    color: cadetblue;
+}

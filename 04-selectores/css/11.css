@@ -1,0 +1,4 @@
+/* selector primer hijo de una lista */
+ul li:first-of-type {
+    border: 1px solid orange;
+}

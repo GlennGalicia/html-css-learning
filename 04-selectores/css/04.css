@@ -1,0 +1,9 @@
+/* selector clases anidadas */
+.header .descripcion {
+    background-color: gray;
+    color: bisque;
+}
+
+.descripcion {
+    background-color: red;
+}

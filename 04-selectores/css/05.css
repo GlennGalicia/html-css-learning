@@ -1,0 +1,10 @@
+/* Selector por ID */
+
+#encabezado {
+    text-transform: uppercase;
+    color: antiquewhite;
+}
+
+.texto {
+    color: blue;
+}
