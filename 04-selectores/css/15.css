@@ -1,0 +1,4 @@
+/* Seleccionar Primer linea o primer palabra */
+.primer-letra::first-letter {
+    font-size: 20rem;
+}

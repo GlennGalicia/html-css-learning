@@ -1,0 +1,13 @@
+/* Snippets for media queries */
+
+/* Media Querie for mobiles */
+@media (max-width: 768px) {}
+
+/* Media Queries for tablets */
+@media (min-width: 768px) {}
+
+/* Media Queries for desktops */
+@media (min-width: 1024px) {}
+
+/* Media Querie for range */
+@media (min-width: 768px) and (max-width: 1023px) {}

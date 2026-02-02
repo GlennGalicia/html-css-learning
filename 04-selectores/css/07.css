@@ -1,0 +1,5 @@
+/* Seleccionar dos elementos distintos, dif clases, mismos estilos */
+.texto,
+.oferta {
+    background-color: antiquewhite;
+}

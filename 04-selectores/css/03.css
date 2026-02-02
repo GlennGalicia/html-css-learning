@@ -1,0 +1,16 @@
+/* selector de clases */
+.texto {
+    background-color: grey;
+}
+
+.azul {
+    color: wheat;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.texto.mayusculas {
+    text-align: center;
+}

@@ -1,0 +1,4 @@
+/* Seleccionar elemento en especifico de una lista */
+ul li:nth-child(2) {
+    background-color: salmon;
+}

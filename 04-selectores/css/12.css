@@ -1,0 +1,4 @@
+/* Seleccionar el ultimo elemento de la lista */
+ul li:last-of-type {
+    border: 1px solid salmon;
+}

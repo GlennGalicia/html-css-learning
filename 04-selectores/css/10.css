@@ -1,0 +1,4 @@
+/* Seleccionar elemento por atributos */
+a[href="http://www.google.com"]{
+    background-color: blanchedalmond;
+}
