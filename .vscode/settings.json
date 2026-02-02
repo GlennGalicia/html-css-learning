@@ -1,6 +1,6 @@
 {
     "livePreview.defaultPreviewPath": "/05-RWD/index.html",
     "css.styleSheets": [
-        "css/*.css"
+        "./css/*.css"
     ]
 }
