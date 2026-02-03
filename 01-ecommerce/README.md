@@ -146,4 +146,4 @@ html {
 > 
 > * colocar labels junto a los inputs.
 
-[<< Home](../README.md) | [Day 2 >>](../02-flexbox-basicos/readme.md)
+[<< Home](../README.md) | [Day 2 >>](../02-flexbox-basicos/README.md)
