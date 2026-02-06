@@ -1,0 +1,169 @@
+:root {
+    --blanco: #FFF;
+    --negro: #111111;
+    --gris: #343a40;
+
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+html {
+
+    background-color: var(--azul);
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 4.8rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+h2 {
+    font-size: 5.8rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-inline: auto;
+    width: 90%;
+}
+
+
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+
+.caja-curso h1 {
+    margin: 0;
+}
+
+.caja-curso p {
+    font-size: 2.4rem;
+}
+
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+/* Nuestros Productos */
+
+.productos {
+    margin: 5rem 0;
+}
+
+.productos__heading {
+    color: var(--blanco);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.producto {
+    background-color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.producto:last-of-type {
+    margin-bottom: 0;
+}
+
+.producto__contenido {
+    padding: 2rem;
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__descripcion {
+    color: #8b8b8b;
+    margin: 0;
+}
+
+.producto__precios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.producto__precio {
+    font-size: 4rem;
+    color: green;
+    margin: 0;
+    font-weight: 900;
+}
+
+.producto__precio--oferta {
+    color: red;
+    text-decoration: line-through;
+}
+
+.producto__boton {
+    all: unset;
+    background-color: var(--azul);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.producto__boton:hover {
+    background-color: #014570;
+}
+
+@media (min-width: 992px) {
+    .productos__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .producto {
+        margin-bottom: 0;
+    }
+}
