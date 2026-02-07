@@ -206,10 +206,36 @@ img {
     transform: scale(1.1);
 }
 
+@media (min-width: 992px) {
+    .listado__item--2col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
 .listado__heading {
     color: var(--primario);
     font-size: 3rem;
     margin: 0;
+}
+
+.listado__numero {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+    color: var(--primario);
+}
+
+@media (min-width: 992px) {
+    .listado__numero {
+        flex-basis: 20rem;
+        text-align: right;
+        font-size: 4rem;
+    }
 }
 
 .listado__texto {
@@ -262,4 +288,28 @@ img {
     }
 }
 
-.seguridad__image {}
+/* sección comisiones */
+.comisiones__heading {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .comisiones__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+.comisiones__texto {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .comisiones__texto {
+        text-align: left;
+    }
+}
