@@ -1,0 +1,57 @@
+@use 'variables' as v;
+
+/* Global Config */
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+   /* 1rem = 10px */
+   scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+body {
+   font: {
+      size: 1.6rem;
+      /* 16px */
+      family: v.$fuenteSecundaria;
+   }
+
+   line-height: 1.5;
+   background-color: v.$cafeClaro;
+}
+
+p {
+   color: v.$negro;
+   font-size: 1.6rem;
+   line-height: 2;
+}
+
+/* Images */
+img {
+   max-width: 100%;
+   display: block;
+}
+
+/* Links */
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+/* Principal Container */
+.container {
+   max-width: 120rem;
+   width: 95%;
+   margin: 0 auto;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "11-cafeteria",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS,Gulp, CSS Grid y Flexbox",
+  "license": "ISC",
+  "author": "Glenn Galicia",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "cssnano": "^7.1.2",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.5.6",
+    "sass": "^1.97.3"
+  },
+  "browserslist": [
+    "> 1%"
+  ]
+}
