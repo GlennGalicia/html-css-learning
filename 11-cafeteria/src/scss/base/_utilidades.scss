@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+/* Utilities */
+
+.text-center {
+   text-align: center;
+}
+
+.bg-primario {
+   background-color: v.$colorPrimario;
+}
