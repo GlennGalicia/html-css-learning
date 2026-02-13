@@ -357,31 +357,13 @@ body {
   /* 16px */
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 900;
-  margin-bottom: 0 0 50rem 0;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-}
-
-h3 {
-  font-size: 3.2rem;
+  background-color: #ebe7de;
 }
 
 p {
   color: #000;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 /* Images */
@@ -401,6 +383,44 @@ a {
   max-width: 120rem;
   width: 95%;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0 0 50rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  color: #5E311E;
+}
+h2 span {
+  color: #C39C63;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url(../img/cafe.svg);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  font-size: 3.2rem;
 }
 
 /* Utilities */
@@ -501,5 +521,18 @@ a {
   }
   .nav-principal a {
     margin-bottom: 0;
+  }
+}
+
+/* principal section */
+.container-principal {
+  background-color: #FFF;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .container-principal {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
   }
 }
