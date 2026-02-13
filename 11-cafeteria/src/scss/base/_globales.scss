@@ -18,7 +18,7 @@ body {
    font: {
       size: 1.6rem;
       /* 16px */
-      family: v.$fuentePrincipal;
+      family: v.$fuenteSecundaria;
    }
 
    line-height: 1.5;
@@ -41,6 +41,12 @@ img {
 a {
    text-decoration: none;
    color: inherit;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 /* Principal Container */
