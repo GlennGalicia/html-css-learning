@@ -21,5 +21,5 @@
 @mixin grid($colums, $spacing) {
    display: grid;
    grid-template-columns: repeat($colums, 1fr);
-   column-gap: $spacing;
+   gap: $spacing;
 }
