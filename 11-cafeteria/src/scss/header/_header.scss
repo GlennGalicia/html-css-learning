@@ -1,0 +1,104 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* header section */
+.header {
+   padding: 5rem 0;
+   position: relative;
+
+   @include m.tablet {
+      min-height: 70rem;
+   }
+
+   &::before {
+      content: '';
+      position: absolute;
+      background-color: v.$negro;
+      opacity: .6;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+   }
+
+   &__initial {
+      background: {
+         image: url(../img/header_inicio.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__nosotros {
+      background: {
+         image: url(../img/header_nosotros.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__proceso {
+      background: {
+         image: url(../img/header_proceso.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__menu {
+      background: {
+         image: url(../img/header_menu.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__galeria {
+      background: {
+         image: url(../img/header_galeria.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__contacto {
+      background: {
+         image: url(../img/header_contacto.jpg);
+         repeat: no-repeat;
+      }
+   }
+
+   &__container {
+      position: relative;
+
+      h1 {
+         color: v.$blanco;
+         margin-top: 5rem;
+
+         text: {
+            align: center;
+            transform: uppercase;
+         }
+
+         @include m.tablet {
+            margin-top: 10rem;
+         }
+      }
+   }
+
+   &__barra {
+      display: flex;
+      flex-direction: column;
+
+      @include m.tablet {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+}
+
+.logo {
+   width: 50%;
+   margin: 0 auto;
+
+   @include m.tablet {
+      width: 200px;
+      margin: 0;
+   }
+}
