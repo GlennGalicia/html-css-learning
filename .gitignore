@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Build outputs
+dist/
+*.css.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Package lock (opcional, depende de tu equipo)
+package-lock.json
+
+# Imágenes originales (procesadas localmente con Gulp)
+11-cafeteria/src/img/

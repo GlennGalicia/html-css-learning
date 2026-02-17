@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* nosotros section */
+.nosotros__grid {
+
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+        align-items: center;
+    }
+}
+
+.nosotros__img {
+
+    margin-bottom: 5rem;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+
+    img {
+        transform: rotate(-6deg);
+        border: 3rem solid v.$blanco;
+        box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 35);
+    }
+}
+
+.nosotros__texto {
+    blockquote {
+        margin: 0;
+        padding: 1rem;
+        border-left: 5px solid v.$colorPrimario;
+        font-size: 2rem;
+    }
+}
