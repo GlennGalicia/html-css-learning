@@ -1,0 +1,43 @@
+/* pasos styles section */
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pasos {
+    margin-top: v.$separacion;
+
+    &__waves {
+        display: block;
+        margin-top: -1px;
+        width: 100%;
+    }
+
+    &__contenido {
+        background-color: v.$primario;
+    }
+
+    &__heading {
+        text-align: center;
+        color: v.$blanco;
+
+        &--descripcion {
+            display: block;
+            font-size: 1.8rem
+        }
+    }
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(3, v.$separacion);
+        }
+    }
+
+    &__imagen {
+
+        transition-property: transform;
+        transition-duration: 300ms;
+
+        &:hover {
+            transform: rotate(-4deg) scale(1.2)
+        }
+    }
+}
