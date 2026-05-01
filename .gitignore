@@ -21,5 +21,9 @@ yarn-error.log*
 # Package lock (opcional, depende de tu equipo)
 package-lock.json
 
-# Imágenes originales (procesadas localmente con Gulp)
-11-cafeteria/src/img/
+# Imágenes  procesadas localmente con Gulp
+11-cafeteria/build/
+12-DeliveryApp/build/
+
+# Prompts
+prompts/

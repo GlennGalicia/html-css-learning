@@ -1,0 +1,71 @@
+@use 'variables' as v;
+
+/* Global Config */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    /* 16px */
+    font-family: v.$fuente_principal;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 2rem;
+    color: v.$negro;
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+    margin: 0 0 v.$separacion 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Principal Container */
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
