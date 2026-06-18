@@ -1,8 +1,9 @@
 {
-  "name": "cafeteria",
+  "name": "podcast-app",
   "version": "1.0.0",
   "description": "Podcast App. CSS Grid, Flexbox, Gulp, SASS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "gulp"
   },
@@ -11,13 +12,13 @@
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.7",
-    "gulp": "^4.0.2",
-    "gulp-avif": "^1.0.1",
-    "gulp-imagemin": "^7.1.0",
+    "gulp": "^5.0.1",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^9.2.0",
     "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-webp": "^4.0.1",
+    "gulp-webp": "^5.1.0",
     "postcss": "^8.3.6",
     "sass": "^1.37.5"
   },

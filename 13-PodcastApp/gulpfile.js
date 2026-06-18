@@ -1,60 +1,51 @@
-const { src, dest, watch, series } = require('gulp');
+import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
+import * as dartSass from 'sass';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import cssnano from 'cssnano';
+import webp from 'gulp-webp';
 
-// CSS y SASS
-const sass = require('gulp-sass')(require('sass'));
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const cssnano = require('cssnano');
+const sass = gulpSass(dartSass);
+const { src, dest, watch, series } = gulp;
 
-// Imagenes
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const avif = require('gulp-avif');
-
-function css( done ) {
+// Dev — sin cssnano, con sourcemaps
+function css(done) {
     src('src/scss/app.scss')
-        .pipe( sourcemaps.init() )
-        .pipe( sass() )
-        .pipe( postcss([ autoprefixer(), cssnano() ]) )
-        .pipe( sourcemaps.write('.'))
-        .pipe( dest('build/css') )
+        .pipe(sourcemaps.init())
+        .pipe(sass({ api: 'modern' }))
+        .pipe(postcss([autoprefixer()]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest('build/css'))
 
     done();
 }
 
+// Build — con cssnano, sin sourcemaps
+function build(done) {
+    src('src/scss/app.scss')
+        .pipe(sass({ api: 'modern' }))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(dest('build/css'))
+    done();
+}
+
 function imagenes() {
-    return src('src/img/**/*')
-        .pipe( imagemin({ optimizationLevel: 3 }) )
-        .pipe( dest('build/img') )
+    return src('src/img/**/*', { encoding: false })
+        .pipe(dest('build/img', { encoding: false }))
 }
 
 function versionWebp() {
-    const opciones = {
-        quality: 50
-    }
-    return src('src/img/**/*.{png,jpg}')
-        .pipe( webp( opciones ) )
-        .pipe( dest('build/img') )
-}
-function versionAvif() {
-    const opciones = {
-        quality: 50
-    }
-    return src('src/img/**/*.{png,jpg}')
-        .pipe( avif( opciones ) )
-        .pipe( dest('build/img'))
+    return src('src/img/**/*.{png,jpg}', { encoding: false })
+        .pipe(webp({ quality: 50 }))
+        .pipe(dest('build/img', { encoding: false }))
 }
 
 function dev() {
-    watch( 'src/scss/**/*.scss', css );
-    watch( 'src/img/**/*', imagenes );
+    watch('src/scss/**/*.scss', css);
+    watch('src/img/**/*', imagenes);
 }
 
-
-exports.css = css;
-exports.dev = dev;
-exports.imagenes = imagenes;
-exports.versionWebp = versionWebp;
-exports.versionAvif = versionAvif;
-exports.default = series( imagenes, versionWebp, versionAvif, css, dev  );
+export { css, build, dev, imagenes, versionWebp };
+export default series(imagenes, versionWebp, css, dev);
