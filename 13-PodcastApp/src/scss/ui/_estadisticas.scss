@@ -1,0 +1,9 @@
+/* Estadisticas estilos */
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.estadisticas {
+    h2 {
+        @include m.headingBorder(v.$secundario, v.$primario);
+    }
+}

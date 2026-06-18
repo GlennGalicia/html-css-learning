@@ -1,0 +1,39 @@
+/* header estilos */
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.site-header {
+    @include m.bgImage('../img/header.jpg', v.$secundarioOpacity);
+    padding: 5rem 0;
+
+    .logo {
+        max-width: 20rem;
+        margin: 0 auto;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+
+    .contenido-header {
+        padding-block: 10rem;
+
+        @include m.desktop {
+            padding-block: 15rem;
+        }
+
+        h1 {
+            color: v.$blanco;
+            font-size: 4.2rem;
+
+            @include m.tablet {
+                font-size: 6rem;
+                max-width: 50%;
+            }
+
+            @include m.desktop {
+                max-width: 40%;
+            }
+        }
+    }
+}
