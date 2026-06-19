@@ -519,7 +519,110 @@ ul {
   margin: -1.4rem 0 0 0;
 }
 
-.boton-primario {
+/* Planes estilos */
+.planes {
+  background-color: #313c4e;
+}
+.planes h2 {
+  font-size: 3.6rem;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .planes h2 {
+    margin-top: 0;
+  }
+}
+.planes h2::after {
+  content: "";
+  background-color: #84d9bc;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
+.planes .descripcion {
+  color: #FFFFFF;
+}
+
+.nuestros-planes {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .nuestros-planes {
+    flex-direction: row;
+    max-width: 80rem;
+    margin-inline: auto;
+    -webkit-margin-before: 10rem;
+            margin-block-start: 10rem;
+  }
+}
+.nuestros-planes .plan {
+  background-color: #FFFFFF;
+  flex-grow: 1;
+  padding: 16rem 4rem 4rem 4rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .nuestros-planes .plan {
+    border: none;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 300ms;
+  }
+  .nuestros-planes .plan:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.nuestros-planes .plan .precio {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nuestros-planes .plan .listado li {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.nuestros-planes .plan .listado li:last-of-type {
+  margin-bottom: 0;
+}
+.nuestros-planes .plan.inicio {
+  background-image: url("../img/icono_inicio.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+}
+.nuestros-planes .plan.negocio {
+  background-color: #84d9bc;
+  background-image: url("../img/icono_negocio.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+  order: -1;
+}
+@media (min-width: 768px) {
+  .nuestros-planes .plan.negocio {
+    order: unset;
+    margin-block: -5rem;
+    border-radius: 2rem;
+    background-position: 50% 7rem;
+    padding-top: 21rem;
+    z-index: 100;
+  }
+}
+.nuestros-planes .plan.pro {
+  background-image: url("../img/icono_pro.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+}
+
+.boton-primario, .boton-plan {
   background-color: #84d9bc;
   font-size: 2rem;
   padding: 1.2rem 4rem;
@@ -532,14 +635,20 @@ ul {
   transition: background-color 0.3s ease;
   border: none;
 }
-.boton-primario:hover {
+.boton-primario:hover, .boton-plan:hover {
   cursor: pointer;
   background-color: rgb(93.0372670807, 204.9627329193, 166.7763975155);
 }
 @media (min-width: 768px) {
-  .boton-primario {
+  .boton-primario, .boton-plan {
     width: auto;
     display: inline-block;
   }
+}
+
+.boton-plan {
+  border: 2px solid #FFFFFF;
+  margin-top: 2rem;
+  display: block;
 }
 /*# sourceMappingURL=app.css.map */
