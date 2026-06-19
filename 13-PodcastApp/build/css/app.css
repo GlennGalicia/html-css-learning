@@ -322,7 +322,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -352,12 +354,34 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0 0 2rem 0;
 }
 
 h1 {
   font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #313c4e;
+}
+@media (min-width: 768px) {
+  h2 {
+    margin-top: 0;
+  }
+}
+h2::after {
+  content: "";
+  background-color: #84d9bc;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
 }
 
 h3 {
@@ -369,6 +393,15 @@ h3 {
 ul {
   padding: 0;
   list-style: none;
+}
+
+.seccion {
+  padding-block: 3rem;
+}
+@media (min-width: 768px) {
+  .seccion {
+    padding-block: 8rem;
+  }
 }
 
 /* header section */
@@ -409,6 +442,16 @@ ul {
 @media (min-width: 1024px) {
   .site-header .contenido-header h1 {
     max-width: 40%;
+  }
+}
+
+/* Crea podcast seccion */
+@media (min-width: 768px) {
+  .crea-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 }
 

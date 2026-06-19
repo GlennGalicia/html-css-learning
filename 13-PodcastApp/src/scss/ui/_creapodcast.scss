@@ -1,0 +1,11 @@
+/* Crea podcast seccion */
+@use 'base/mixins' as m;
+
+.crea-grid {
+
+    @include m.tablet {
+
+        @include m.grid(2, 2rem);
+        align-items: center;
+    }
+}
