@@ -498,6 +498,27 @@ ul {
           transform: rotate(8deg) scale(1.1);
 }
 
+/* Estadisticas estilos */
+.estadisticas h2 {
+  font-size: 3.6rem;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #313c4e;
+}
+@media (min-width: 768px) {
+  .estadisticas h2 {
+    margin-top: 0;
+  }
+}
+.estadisticas h2::after {
+  content: "";
+  background-color: #84d9bc;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
+
 .boton-primario {
   background-color: #84d9bc;
   font-size: 2rem;
