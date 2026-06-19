@@ -364,26 +364,6 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
-  font-size: 3.6rem;
-  display: inline-block;
-  margin-top: 5rem;
-  color: #313c4e;
-}
-@media (min-width: 768px) {
-  h2 {
-    margin-top: 0;
-  }
-}
-h2::after {
-  content: "";
-  background-color: #84d9bc;
-  height: 1rem;
-  width: calc(100% + 1rem);
-  display: block;
-  margin: -1.4rem 0 0 0;
-}
-
 h3 {
   font-size: 2.8rem;
   text-align: center;
@@ -404,7 +384,7 @@ ul {
   }
 }
 
-/* header section */
+/* header estilos */
 .site-header {
   background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url("../img/header.jpg");
   background-repeat: no-repeat;
@@ -445,7 +425,7 @@ ul {
   }
 }
 
-/* Crea podcast seccion */
+/* Crea podcast estilos */
 @media (min-width: 768px) {
   .crea-grid {
     display: grid;
@@ -453,6 +433,69 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+}
+.crea-grid h2 {
+  font-size: 3.6rem;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #313c4e;
+}
+@media (min-width: 768px) {
+  .crea-grid h2 {
+    margin-top: 0;
+  }
+}
+.crea-grid h2::after {
+  content: "";
+  background-color: #84d9bc;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
+
+/* beneficios estilos */
+.beneficios {
+  background-color: #84d9bc;
+}
+@media (min-width: 768px) {
+  .beneficios .grid-beneficios {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+}
+.beneficios .contenido-beneficios {
+  grid-column: 1/4;
+}
+.beneficios .contenido-beneficios h2 {
+  font-size: 3.6rem;
+  display: inline-block;
+  margin-top: 5rem;
+  color: #313c4e;
+}
+@media (min-width: 768px) {
+  .beneficios .contenido-beneficios h2 {
+    margin-top: 0;
+  }
+}
+.beneficios .contenido-beneficios h2::after {
+  content: "";
+  background-color: #FFFFFF;
+  height: 1rem;
+  width: calc(100% + 1rem);
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
+.beneficios .imagen {
+  grid-column: 4/6;
+  transition-property: rotate scale;
+  transition-duration: 300ms;
+}
+.beneficios .imagen:hover {
+  -webkit-transform: rotate(8deg) scale(1.1);
+          transform: rotate(8deg) scale(1.1);
 }
 
 .boton-primario {
