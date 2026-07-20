@@ -1,0 +1,32 @@
+/* experiencias styles */
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.experiencias {
+
+    &__listado {
+        display: grid;
+        grid-template-columns: repeat(3, 30rem);
+        column-gap: 2rem;
+        @include m.scrollhorizontal;
+
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.experiencia {
+    &__imagen {
+        border-radius: 1rem;
+    }
+
+    &__titulo {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__descripcion {
+        font-size: 1.8rem;
+    }
+}

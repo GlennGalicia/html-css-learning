@@ -24,6 +24,7 @@ package-lock.json
 # Imágenes  procesadas localmente con Gulp
 11-cafeteria/build/
 12-DeliveryApp/build/
+14-airbnb/build/
 
 # Prompts
 prompts/
