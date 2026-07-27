@@ -1,0 +1,27 @@
+/* barra styles */
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.barra {
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nombre {
+        color: v.$blanco;
+        margin: 0;
+    }
+
+    &__navegacion {
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__link {
+        color: v.$blanco;
+    }
+}
