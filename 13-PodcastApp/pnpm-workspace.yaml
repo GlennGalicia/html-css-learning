@@ -1,0 +1,5 @@
+allowBuilds:
+  '@parcel/watcher': true
+  cwebp-bin: true
+  es5-ext: true
+  sharp: true

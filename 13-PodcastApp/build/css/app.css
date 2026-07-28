@@ -773,7 +773,7 @@ ul {
 }
 .boton-primario:hover, .boton-plan:hover {
   cursor: pointer;
-  background-color: rgb(93.0372670807, 204.9627329193, 166.7763975155);
+  background-color: rgb(36.4852027768%, 80.3775423213%, 65.4025088296%);
 }
 @media (min-width: 768px) {
   .boton-primario, .boton-plan {

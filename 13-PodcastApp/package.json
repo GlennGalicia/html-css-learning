@@ -4,6 +4,7 @@
   "description": "Podcast App. CSS Grid, Flexbox, Gulp, SASS",
   "main": "index.js",
   "type": "module",
+  "packageManager": "pnpm@11.17.0",
   "scripts": {
     "dev": "gulp"
   },
@@ -14,7 +15,6 @@
     "cssnano": "^5.0.7",
     "gulp": "^5.0.1",
     "gulp-avif": "^1.1.1",
-    "gulp-imagemin": "^9.2.0",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
