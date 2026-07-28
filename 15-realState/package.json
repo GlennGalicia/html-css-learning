@@ -1,0 +1,29 @@
+{
+  "name": "Real State",
+  "version": "1.0.0",
+  "description": "Venta de casas y departamentos",
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "Glenn Fernando Galicia Avina",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.7",
+    "gulp": "^5.0.1",
+    "gulp-avif": "^1.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^5.0.1",
+    "postcss": "^8.3.6",
+    "sass": "^1.37.5"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
