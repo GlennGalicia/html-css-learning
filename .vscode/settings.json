@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+
+  // One formatter for the whole repo; per-language overrides belong in user settings.
+  // Style rules live in .prettierrc and .editorconfig at the root.
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

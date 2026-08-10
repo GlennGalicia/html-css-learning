@@ -1,32 +1,24 @@
-# Node.js
+# Dependencies
 node_modules/
 
 # Build outputs
 dist/
+build/
+css/
 *.css.map
+.sass-cache/
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+*.log
 
 # Environment variables
 .env
-.env.local
+.env.*
+!.env.example
 
-# IDE
-.vscode/
-.idea/
-
-# Package lock (opcional, depende de tu equipo)
+# Enforce pnpm as the only package manager
 package-lock.json
+yarn.lock
 
-# Imágenes  procesadas localmente con Gulp
-11-cafeteria/build/
-12-DeliveryApp/build/
-14-airbnb/build/
-15-realState/build/
-
-# Prompts
-prompts/
+# Claude Code
+.claude/

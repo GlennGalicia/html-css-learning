@@ -1,0 +1,9 @@
+pnpm-lock.yaml
+
+# Vendor code: keep upstream formatting so updates stay diffable.
+normalize.css
+_normalize.scss
+
+# Compiled assets
+*.min.css
+*.min.js
