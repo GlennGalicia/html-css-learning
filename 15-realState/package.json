@@ -6,7 +6,9 @@
   "type": "module",
   "packageManager": "pnpm@11.17.0",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "format": "prettier --write . --ignore-path ../.gitignore --ignore-path ../.prettierignore",
+    "format:check": "prettier --check . --ignore-path ../.gitignore --ignore-path ../.prettierignore"
   },
   "author": "Glenn Fernando Galicia Avina",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-webp": "^5.0.1",
     "postcss": "^8.3.6",
+    "prettier": "3.9.6",
     "sass": "^1.37.5"
   },
   "browserslist": [
