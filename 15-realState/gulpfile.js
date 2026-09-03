@@ -3,48 +3,60 @@ import gulpSass from 'gulp-sass';
 import * as dartSass from 'sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import sourcemaps from 'gulp-sourcemaps';
 import cssnano from 'cssnano';
 import webp from 'gulp-webp';
+import browserSync from 'browser-sync';
 
 const sass = gulpSass(dartSass);
 const { src, dest, watch, series } = gulp;
+const server = browserSync.create();
 
-// Dev — sin cssnano, con sourcemaps
-function css(done) {
-  src('src/scss/app.scss')
-    .pipe(sourcemaps.init())
+// Dev CSS: sourcemaps, no minification, injected without a full page reload.
+function cssDev() {
+  return src('src/scss/app.scss', { sourcemaps: true })
     .pipe(sass({ api: 'modern' }))
     .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('build/css'));
-
-  done();
+    .pipe(dest('build/css', { sourcemaps: '.' }))
+    .pipe(server.stream());
 }
 
-// Build — con cssnano, sin sourcemaps
-function build(done) {
-  src('src/scss/app.scss')
+// Production CSS: minified, no sourcemaps.
+function cssProd() {
+  return src('src/scss/app.scss')
     .pipe(sass({ api: 'modern' }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('build/css'));
-  done();
 }
 
-function imagenes() {
+// `encoding: false` is required in Gulp 5 to avoid corrupting binary files.
+function images() {
   return src('src/img/**/*', { encoding: false }).pipe(dest('build/img', { encoding: false }));
 }
 
-function versionWebp() {
+function webpVersion() {
   return src('src/img/**/*.{png,jpg}', { encoding: false })
     .pipe(webp({ quality: 50 }))
     .pipe(dest('build/img', { encoding: false }));
 }
 
-function dev() {
-  watch('src/scss/**/*.scss', css);
-  watch('src/img/**/*', imagenes);
+// Long-running task: `done` is declared so Gulp waits, and intentionally never
+// called so the watchers keep the process alive.
+function watchFiles(done) {
+  server.init({
+    server: './',
+    host: '0.0.0.0',
+    port: 3000,
+    open: false,
+    notify: false,
+  });
+
+  watch('src/scss/**/*.scss', cssDev);
+  watch('src/img/**/*', series(images, webpVersion));
+  watch('*.html').on('change', server.reload);
 }
 
-export { css, build, dev, imagenes, versionWebp };
-export default series(imagenes, versionWebp, css, dev);
+export const dev = series(images, webpVersion, cssDev, watchFiles);
+export const build = series(images, webpVersion, cssProd);
+
+export { cssDev, cssProd, images, webpVersion, watchFiles };
+export default dev;
