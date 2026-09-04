@@ -14,12 +14,11 @@ const server = browserSync.create();
 // Dev CSS: sourcemaps, no minification, injected without a full page reload.
 function cssDev() {
   return src('src/scss/app.scss', { sourcemaps: true })
-    .pipe(sass({ api: 'modern' }))
+    .pipe(sass({ api: 'modern' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(dest('build/css', { sourcemaps: '.' }))
     .pipe(server.stream());
 }
-
 // Production CSS: minified, no sourcemaps.
 function cssProd() {
   return src('src/scss/app.scss')
