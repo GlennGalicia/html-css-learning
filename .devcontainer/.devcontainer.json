@@ -1,0 +1,24 @@
+{
+  "name": "html-css-learning",
+
+  // Must match "engines.node" in the project's package.json.
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  // Activates the pnpm version pinned in package.json "packageManager".
+  // Dependencies are installed per project, not here — this repo holds 15 of them.
+  "postCreateCommand": "corepack enable",
+
+  "forwardPorts": [3000, 3001],
+
+  "remoteUser": "node"
+}
