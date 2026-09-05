@@ -51,11 +51,14 @@
   grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin heading {
+@mixin heading($salto: false) {
   font-weight: 400;
 
   span {
     font-weight: 700;
+    @if ($salto) {
+      display: block;
+    }
   }
 
   ::after {
@@ -64,7 +67,12 @@
     height: 1rem;
     width: 15rem;
     margin-top: 1rem;
-    background-image: linear-gradient(to right, v.$primario 0%, v.$primario 50%, color.adjust(v.$primario, $lightness: 20%) 50%,
-      color.adjust(v.$primario, $lightness: 20%) 100% );
+    background-image: linear-gradient(
+      to right,
+      v.$primario 0%,
+      v.$primario 50%,
+      color.adjust(v.$primario, $lightness: 20%) 50%,
+      color.adjust(v.$primario, $lightness: 20%) 100%
+    );
   }
 }
