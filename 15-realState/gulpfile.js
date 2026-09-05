@@ -45,7 +45,8 @@ function watchFiles(done) {
     server: './',
     host: '0.0.0.0',
     port: 3000,
-    open: false,
+    // Codespaces has no browser inside the container; open only in local dev.
+    open: !process.env.CODESPACES,
     notify: false,
   });
 
